@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+      padding: 1rem;
+      color: white;
+    }
+
+    .container {
+      max-width: 600px;
+      text-align: center;
+      position: relative;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 1rem;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .title {
+      font-size: 8rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      background: linear-gradient(45deg, #3b82f6, #60a5fa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: pulse 2s infinite;
+    }
+
+    .subtitle {
+      font-size: 2rem;
+      color: #e5e7eb;
+      margin-bottom: 1.5rem;
+    }
+
+    .description {
+      color: #9ca3af;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      background: #3b82f6;
+      color: white;
+    }
+
+    .btn:hover {
+      background: #2563eb;
+      transform: translateY(-2px);
+    }
+
+    /* Decorative elements */
+    .decoration {
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+      opacity: 0.3;
+    }
+
+    .decoration-top {
+      top: 0;
+      left: 0;
+    }
+
+    .decoration-bottom {
+      bottom: 0;
+      left: 0;
+    }
+
+    @keyframes pulse {
+      0% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.8;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /* Icon styles */
+    .icon {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+    @media (max-width: 640px) {
+      .title {
+        font-size: 6rem;
+      }
+
+      .subtitle {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="decoration decoration-top"></div>
+    <h1 class="title">404</h1>
+    <h2 class="subtitle">Oops! Page Not Found</h2>
+    <p class="description">
+      The page you're looking for seems to have wandered off into the digital void.
+      Let's get you back on track.
+    </p>
+    <a href="https://ahmad-portfolio-webapp.web.app" class="btn">
+      <svg class="icon" viewBox="0 0 24 24">
+        <path
+          d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+      </svg>
+      Return Home
+    </a>
+    <div class="decoration decoration-bottom"></div>
+  </div>
+</body>
+
+</html>

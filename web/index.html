@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+
+  <style>
+    body {
+      background-color: #161c2a;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .loader {
+      width: 120px;
+      height: 20px;
+      --c: #fff 92%, #0000;
+      background:
+        radial-gradient(circle 10px at bottom, var(--c)) 0 0,
+        radial-gradient(circle 10px at top, var(--c)) 0 100%;
+      background-size: calc(100%/4) 50%;
+      background-repeat: repeat-x;
+      animation: l11 1s infinite;
+    }
+
+    @keyframes l11 {
+
+      80%,
+      100% {
+        background-position: calc(100%/3) 0, calc(100%/-3) 100%
+      }
+    }
+  </style>
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description"
+    content="Discover my journey as a developer, crafting intuitive solutions and elegant designs. Explore projects that merge innovation with functionality!">
+
+  <!-- Open Graph meta tags -->
+  <meta property="og:title" content="Ahmad's Portfolio" />
+  <meta property="og:description"
+    content="Discover my journey as a developer, crafting intuitive solutions and elegant designs. Explore projects that merge innovation with functionality!" />
+  <meta property="og:image" content="https://i.postimg.cc/T2Dx5L4G/card-image.png" />
+  <meta property="og:url" content="https://ahmad-portfolio-webapp.web.app" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Ahmad's Portfolio">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.ico" />
+
+  <title>Ahmad's Portfolio</title>
+  <link rel="manifest" href="manifest.json">
+
+  <script>
+    const serviceWorkerVersion = null;
+  </script>
+  <script src="flutter.js" defer></script>
+</head>
+
+<body>
+  <div class="loader"></div>
+  <script>
+    window.addEventListener('load', function (ev) {
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function (engineInitializer) {
+          engineInitializer.initializeEngine().then(function (appRunner) {
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+  </script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyCMC8bo-lexEbkzjGBiFlWfA_rLUfIBiDQ",
+      authDomain: "ahmad-portfolio-webapp.firebaseapp.com",
+      projectId: "ahmad-portfolio-webapp",
+      storageBucket: "ahmad-portfolio-webapp.firebasestorage.app",
+      messagingSenderId: "622349660779",
+      appId: "1:622349660779:web:42918bd7c041b3559a772e",
+      measurementId: "G-NKPJ7T21MY"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+</body>
+
+</html>
