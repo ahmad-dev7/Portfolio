@@ -25,7 +25,7 @@ class MyController extends GetxController {
   submitForm(
       {required String? name, required String? subject, required String? email, required String? message}) async {
     var web3Url = 'https://api.web3forms.com/submit';
-    var web3AccessKey = '85d843c6-1d59-484a-9fce-5bde5c4b6f1c';
+    var web3AccessKey = ''; // Get your access key from web3Form [Ahmad you can check you email for this]
 
     if (formKey.currentState!.validate()) {
       try {
